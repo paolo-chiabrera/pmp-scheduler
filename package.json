@@ -1,0 +1,59 @@
+{
+  "name": "pmp-scheduler",
+  "version": "0.0.0",
+  "description": "pmp scheduler",
+  "homepage": "https://github.com/paolo-chiabrera/pmp-scheduler",
+  "author": {
+    "name": "Paolo Chiabrera",
+    "email": "paolo.chiabrera@gmail.com",
+    "url": "https://github.com/paolo-chiabrera"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "keywords": [
+    "pmp scheduler"
+  ],
+  "devDependencies": {
+    "babel-core": "^5.5.0",
+    "babel-eslint": "^4.1.8",
+    "chai": "^3.5.0",
+    "del": "^2.0.2",
+    "eslint": "^2.1.0",
+    "eslint-config-xo-space": "^0.13.0",
+    "eslint-plugin-babel": "^3.1.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-coveralls": "^0.1.0",
+    "gulp-eslint": "^2.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-line-ending-corrector": "^1.0.1",
+    "gulp-mocha": "^2.0.0",
+    "gulp-nsp": "^2.1.0",
+    "gulp-plumber": "^1.0.0",
+    "isparta": "^3.0.3",
+    "sinon": "^1.17.5"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "mocha": true
+    }
+  },
+  "repository": "https://github.com/paolo-chiabrera/pmp-scheduler.git",
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "joi": "^9.0.4",
+    "lodash": "^4.15.0",
+    "needle": "^1.1.2",
+    "node-schedule": "^1.1.1",
+    "pmp-scraper": ">=0.0.8",
+    "yargs": "^5.0.0"
+  }
+}
