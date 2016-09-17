@@ -36,7 +36,8 @@ describe('getActiveSources', function () {
     });
 
     getActiveSources({
-      options: mocks.options
+      pmpApiUrl: mocks.options.pmpApiUrl,
+      request: mocks.options.request
     }, cb);
   }));
 
@@ -58,7 +59,8 @@ describe('getActiveSources', function () {
     });
 
     getActiveSources({
-      options: mocks.options
+      pmpApiUrl: mocks.options.pmpApiUrl,
+      request: mocks.options.request
     }, cb);
   }));
 
@@ -81,7 +83,8 @@ describe('getActiveSources', function () {
     });
 
     getActiveSources({
-      options: mocks.options
+      pmpApiUrl: mocks.options.pmpApiUrl,
+      request: mocks.options.request
     }, cb);
   }));
 });

@@ -12,10 +12,13 @@ describe('pmp-scheduler', function () {
 
   beforeEach(function () {
     pmpScheduler = new PmpScheduler({
-      pmpApiUrl: 'http://test.io',
-      request: {
-        headers: {
-          'Authorization': 'test'
+      scheduler: {},
+      scraper: {
+        pmpApiUrl: 'http://test.io',
+        request: {
+          headers: {
+            'Authorization': 'test'
+          }
         }
       }
     });
@@ -28,12 +31,14 @@ describe('pmp-scheduler', function () {
   describe('constructor', function () {
     it('should set all the properties', function () {
       expect(pmpScheduler.options).to.be.an('object');
-      expect(pmpScheduler.options.pmpApiUrl).to.equal('http://test.io');
-      expect(pmpScheduler.options.refreshInterval).to.be.a('number');
-      expect(pmpScheduler.options.request).to.be.an('object');
-      expect(pmpScheduler.options.request.json).to.be.a('boolean');
-      expect(pmpScheduler.options.request.headers).to.be.an('object');
-      expect(pmpScheduler.options.request.headers.Authorization).to.eql('test');
+      expect(pmpScheduler.options.scheduler).to.be.an('object');
+      expect(pmpScheduler.options.scraper).to.be.an('object');
+      expect(pmpScheduler.options.scraper.pmpApiUrl).to.equal('http://test.io');
+      expect(pmpScheduler.options.scheduler.refreshInterval).to.be.a('number');
+      expect(pmpScheduler.options.scraper.request).to.be.an('object');
+      expect(pmpScheduler.options.scraper.request.json).to.be.a('boolean');
+      expect(pmpScheduler.options.scraper.request.headers).to.be.an('object');
+      expect(pmpScheduler.options.scraper.request.headers.Authorization).to.eql('test');
 
       expect(pmpScheduler.activeSources).to.eql([]);
       expect(pmpScheduler.jobs).to.eql({});
